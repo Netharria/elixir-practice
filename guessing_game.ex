@@ -1,7 +1,5 @@
 defmodule GuessingGame do
-  def guess(a, b) when a > b do
-    guess(b, a)
-  end
+  def guess(a, b) when a > b, do: guess(b, a)
 
   def guess(low, high) do
     answer = IO.gets("Hmm... maybe you're thinking of #{mid(low, high)}?\n")
